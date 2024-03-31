@@ -1,0 +1,36 @@
+Најпрво од се го инсталирав Git и на линкот https://github.com/settings/repositories. 
+
+Потоа се најавив на GitHub профилот, таму направив репозиториум SI_2024_lab1_211592 и истиот го направив приватен.
+
+На https://github.com/settings/repositories главната гранка ја сетирав како master.
+
+На мојот компјутер креирав директориум со име SI_2024_lab1_211592 и во него го иницијализирав Git  со командата 'git init'.
+
+Мојот локален репозиториум го поврзав со оддалечениот репозиториум со командата 'git remote add origin https://github.com/shopkoski/SI_2024_lab1_211592.git
+
+README.md фајлот го креирав користејќи ја командата 'echo >> README.md', и откако му ја променив содржината го зачував, и ги извршив командите 'git add . ' и 'git commit -m "Initial commit" .
+
+Откако ги превземав java фајловите од линковите ги извршив командите 'git add . ' и 'git commit -m "Add starter code" .
+
+За синхронизација на сите гранки со оддалечениот репозиториум ја извршив командата 'git push --all' .
+
+Бидејќи моментално се наоѓам на главната гранка master нема потреба да извршувам команда 'git checkout master' , па директно разгранив 2 гранки од master со командите 
+		 git branch bug1
+		 git branch bug2
+
+Потоа се префрлив на гранката bug1 со командата 'git checkout bug1', ја поправив грешката во методот filterOddLengthStrings, ја зачував, и ги извршив командите 'git add . ' и 'git commit -m "Fix wrong condition in filterOddLengthStrings" .
+
+Се префрлив на гранката bug2 со командата 'git checkout bug2', ја поправив грешката во методот makeBigStringFrom , и ги извршив командите 'git add . ' и 'git commit -m "Fix wrong condition in makeBigStringFrom" .
+
+Потоа се префрлив на гранката bug1 со командата 'git checkout bug1', во класата SILab1Main, после for циклусот, во линија 16, додадов повик до статичкиот метод filterOddLengthStrings System.out.println(SILab1_1.filterOddLengthStrings(list));, ја зачував и ги извршив командите 'git add . ' и 'git commit -m "Call method filterOddLengthStrings in main class " 
+
+Потоа се префрлив на гранката bug1 со командата 'git checkout bug2', во класата SILab1Main, после for циклусот, во линија 16, додадов повик до статичкиот метод makeBigStringFrom
+System.out.println(SILab1_2.makeBigStringFrom(list));, ја зачував и ги извршив командите 'git add . ' и 'git commit -m "Call method makeBigStringFrom in main class " 
+
+Потоа со командата git push --all origin ги синхронизирав сите гранки со оддалечениот репозиториум.
+
+Се префрлив на гранката master со командата 'git checkout master' и ги извршив следните команди : ' git merge bug1' 'git push --all origin' и 'git merge bug2' 'git push --all origin' за да ги спојам гранките со master гранката и да синхронизирам со оддалечениот репозиториум.
+
+За гранката bug2 , прво се префрлив на гранката bug2 'git checkout bug2' и направив 'git add SILab1Main.java' git commit -m "Resolved problem", бидејќи оваа гранка не може да се спои со Fast Forwarding.
+'git checkout master' 'git merge bug2' 'git push --all' за пушнување на гранките
+. 
