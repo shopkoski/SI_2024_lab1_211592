@@ -1,0 +1,158 @@
+Microsoft Windows [Version 10.0.22631.3296]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git init
+Initialized empty Git repository in C:/Users/sopko/OneDrive/Desktop/SI_2024_lab1_211592/.git/
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git remote add origin https://github.com/shopkoski/SI_2024_lab1_211592.git
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>echo >> README.md
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Initial commit"
+[master (root-commit) 3514040] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m
+error: switch `m' requires a value
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Add starter code"
+[master 30b408f] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git push --all
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.12 KiB | 163.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shopkoski/SI_2024_lab1_211592.git
+ * [new branch]      master -> master
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git branch
+* master
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git branch bug1
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git branch bug2
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 00e18fb] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m " Fix wrong condition in makeBigStringFrom"
+[bug2 c731f9e]  Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug1
+Switched to branch 'bug1'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 cce4b86] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug2
+Switched to branch 'bug2'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add .
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Call method makeBigStringFrom in main class"
+[bug2 fb86f46] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git push --all origin
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 1.32 KiB | 224.00 KiB/s, done.
+Total 12 (delta 7), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (7/7), completed with 4 local objects.
+To https://github.com/shopkoski/SI_2024_lab1_211592.git
+ * [new branch]      bug1 -> bug1
+ * [new branch]      bug2 -> bug2
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout master
+Switched to branch 'master'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git merge bug1
+Updating 30b408f..cce4b86
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git push --all origin
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/shopkoski/SI_2024_lab1_211592.git
+   30b408f..cce4b86  master -> master
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git merge bug2
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug2
+SILab1Main.java: needs merge
+error: you need to resolve your current index first
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git rebase master
+SILab1Main.java: needs merge
+error: cannot rebase: You have unstaged changes.
+error: additionally, your index contains uncommitted changes.
+error: Please commit or stash them.
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout bug2
+SILab1Main.java: needs merge
+error: you need to resolve your current index first
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git add SILab1Main.java
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git commit -m "Resolved
+problem"
+[master 6c51efa] Resolved problem
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git checkout master
+Already on 'master'
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git merge bug2
+Already up to date.
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>git push --all origin
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 407 bytes | 407.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/shopkoski/SI_2024_lab1_211592.git
+   cce4b86..6c51efa  master -> master
+
+C:\Users\sopko\OneDrive\Desktop\SI_2024_lab1_211592>echo >> logs.txt
